@@ -1,4 +1,10 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in admin_bits_bootstrap.gemspec
+gem "rails", ">= 4.0.0"
+gem "sqlite3"
+
+gem 'admin_bits', git: 'https://github.com/wilqq/admin_bits'
+gem 'bootstrap-sass'
+gem 'sass-rails', '~> 4.0.3'
+
 gemspec
