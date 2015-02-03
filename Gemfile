@@ -8,5 +8,6 @@ gem 'bootstrap-sass'
 gem 'sass-rails', '~> 4.0.3'
 gem 'adminlte-rails'
 gem 'jquery-rails'
+gem 'jquery-datatables-rails'
 
 gemspec
