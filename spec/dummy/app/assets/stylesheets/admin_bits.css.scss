@@ -47,3 +47,24 @@
     .button.alert:hover, .button.alert:focus {
       color: #FFFFFF; }
 
+.resources-nav {
+  margin-left: 30px;
+  a {
+    color: #FFF;
+    font-size: 130%; }}
+.skin-blue .navbar .nav a.active {
+  color: #FFF;
+  background-color: #357CA5;
+  font-weight: 800; }
+.skin-blue .navbar .nav a.not-active {
+   pointer-events: none;
+   cursor: default;
+}
+
+section.title {
+  margin: 20px;
+  h3 {
+    text-align: center;
+  }
+}
+
