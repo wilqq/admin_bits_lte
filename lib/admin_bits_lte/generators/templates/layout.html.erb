@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>AdminLTE</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <%= stylesheet_link_tag "admin_bits", media: 'all' %>
-    <%= javascript_include_tag "admin_bits" %>
+    <%%= stylesheet_link_tag "admin_bits", media: 'all' %>
+    <%%= javascript_include_tag "admin_bits" %>
   </head>
   <body class="skin-blue">
     <header class="header">
@@ -50,14 +50,14 @@
     <div class="wrapper row-offcanvas row-offcanvas-left">
       <aside class="left-side sidebar-offcanvas">
         <section class="sidebar">
-        <%= render partial: "admin/#{current_resource.downcase}/filters" %>
+        <%%= render partial: "admin/#{current_resource.downcase}/filters" %>
         </section>
       </aside>
       <aside class="right-side">
         <section class="content-header">
-            <a href="#" class="btn btn-primary pull-right"><%= "New #{current_resource.singularize}"%></a>
+            <a href="#" class="btn btn-primary pull-right"><%%= "New #{current_resource.singularize}"%></a>
             <h1>
-                <%= current_resource %>
+                <%%= current_resource %>
             </h1>
         </section>
 
@@ -66,10 +66,10 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title"><%= current_resource %></h3>
+                  <h3 class="box-title"><%%= current_resource %></h3>
                 </div>
                 <div class="box-body table-responsive">
-                  <%= yield %>
+                  <%%= yield %>
                 </div>
               </div>
             </div>

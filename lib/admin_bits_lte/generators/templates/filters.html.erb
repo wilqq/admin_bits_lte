@@ -1,0 +1,18 @@
+<section class="filters">
+  <h3> Example Filters </h3>
+  <div id="filtering">
+    <%%= admin_form :method => :get do %>
+      <div class="form-group">
+        <label>Name: </label>
+        <%%= text_field_tag("filters[:having_name]", admin_filter[:having_name], class: 'form-control', placeholder: 'Enter name') %>
+      </div>
+      <div class="form-group">
+        <label>Price: </label>
+        <%%= text_field_tag("filters[price_between][from]", admin_filter(:price_between, :from), class: 'form-control', placeholder: 'from') %>
+        <%%= text_field_tag("filters[price_between][to]", admin_filter(:price_between, :to), class: 'form-control', placeholder: 'to') %>
+      </div>
+      <button class="btn btn-primary">Filter!</button>
+
+    <%% end %>
+  </div>
+</section>
