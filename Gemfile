@@ -10,4 +10,6 @@ gem 'adminlte-rails'
 gem 'jquery-rails'
 gem 'jquery-datatables-rails'
 
+gem 'pry'
+
 gemspec

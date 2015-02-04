@@ -25,6 +25,15 @@ class AdminBitsLteGenerator < Rails::Generators::Base
     template 'filters.html.erb', "app/views/#{namespace}/#{resource}/_filters.html.erb"
   end
 
+  def add_assets_initializer
+    if (['admin_bits.css', 'admin_bits.js'] -  Rails.application.config.assets.precompile).any?
+      content = 'Rails.application.config.assets.precompile += %w(admin_bits.css admin_bits.js)'
+      path = 'config/initializers/assets.rb'
+
+      File.write(path, content, mode: 'a')
+    end
+  end
+
   protected
 
   def namespace
