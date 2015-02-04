@@ -1,14 +1,14 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'admin_bits_bootstrap/version'
+require 'admin_bits_lte/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "admin_bits_bootstrap"
-  spec.version       = AdminBitsBootstrap::VERSION
+  spec.name          = "admin_bits_lte"
+  spec.version       = AdminBitsLte::VERSION
   spec.authors       = ["Mateusz Wilczynski"]
   spec.email         = ["majko7@interia.pl"]
-  spec.summary       = "AdminBitsBootstrap is addition to the AdminBitst"
+  spec.summary       = "AdminBitsLte is addition to the AdminBitst"
   spec.homepage      = ""
 
   spec.files         = `git ls-files -z`.split("\x0")
