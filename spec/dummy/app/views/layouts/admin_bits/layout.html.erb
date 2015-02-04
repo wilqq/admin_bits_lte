@@ -51,32 +51,14 @@
     <div class="wrapper row-offcanvas row-offcanvas-left">
       <aside class="left-side sidebar-offcanvas">
         <section class="sidebar">
-          <section class="title">
-            <h3> Filters </h3>
-            <div id="filtering">
-              <%= admin_form :method => :get do %>
-                <div class="form-group">
-                  <h5>Name: </h5>
-                  <%= admin_text_filter :having_name %>
-                </div>
-                <div class="form-group">
-                  <h5>Price: </h5>
-                  <label>from: </label> <%= text_field_tag("filters[price_between][from]", admin_filter(:price_between, :from)) %>
-                  <label>to: </label> <%= text_field_tag("filters[price_between][to]", admin_filter(:price_between, :to)) %>
-                </div>
-                <button class="btn btn-primary">Filter!</button>
-
-              <% end %>
-            </div>
-          </section>
+        <%= render partial: "admin/#{current_resource.downcase}/filters" %>
         </section>
       </aside>
-
       <!-- Right side column. Contains the navbar and content of the page -->
       <aside class="right-side">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <a href="#" class="btn btn-primary pull-right">New Item</a>
+            <a href="#" class="btn btn-primary pull-right"><%= "New #{current_resource.singularize}"%></a>
             <h1>
                 <%= current_resource %>
             </h1>
