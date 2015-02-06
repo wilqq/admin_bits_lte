@@ -11,4 +11,6 @@ module AdminBitsLte
       Rails::Generators.invoke('admin_bits_lte', [params['resource'], "--namespace=#{params['namespace']}"])
     end
   end
+
+  AdminBits::Extentions.send(:include, AdminBitsLte)
 end
