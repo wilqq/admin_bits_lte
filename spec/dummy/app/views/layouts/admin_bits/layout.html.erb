@@ -49,7 +49,7 @@
       </aside>
       <aside class="right-side">
         <section class="content-header">
-            <a href="#" class="btn btn-primary pull-right"><%= "New #{current_resource.singularize}"%></a>
+            <%= link_to "New #{current_resource.singularize}", "#{resource.path}/new", class: 'btn btn-primary pull-right' %>
             <h1>
                 <%= current_resource %>
             </h1>
@@ -59,9 +59,6 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="box">
-                <div class="box-header">
-                  <h3 class="box-title"><%= current_resource %></h3>
-                </div>
                 <div class="box-body table-responsive">
                   <%= yield %>
                 </div>
