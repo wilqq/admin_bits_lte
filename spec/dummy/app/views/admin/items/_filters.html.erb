@@ -4,7 +4,7 @@
     <%= admin_form :method => :get do %>
       <div class="form-group">
         <label>Name: </label>
-        <%= text_field_tag("filters[:having_name]", admin_filter[:having_name], class: 'form-control', placeholder: 'Enter name') %>
+        <%= text_field_tag("filters[having_name]", admin_filter[:having_name], class: 'form-control', placeholder: 'Enter name') %>
       </div>
       <div class="form-group">
         <label>Price: </label>
